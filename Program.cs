@@ -6,14 +6,19 @@ namespace c_sharp_masterclass
     {
         static void Main(string[] args)
         {
+            WriteSomething();
+            WriteSomethingSpecific("I am an argument and am called from a method");
+            Console.Read();
+        }
+        // access modifier (static) return type method name (parameter 1, parameter2)
+        public static void WriteSomething()
+        {
+            Console.WriteLine("I am called from a method");
+        }
 
-            Console.WriteLine("Please enter your name and press enter");
-
-            string input = Console.ReadLine();
-            Console.WriteLine(input.ToUpper());
-            Console.WriteLine(input.ToLower());
-            Console.WriteLine(input.Trim());
-            Console.WriteLine(input.Substring(0));
+        public static void WriteSomethingSpecific(string myText)
+        {
+            Console.WriteLine(myText);
         }
     }
 }
