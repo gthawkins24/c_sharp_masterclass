@@ -6,28 +6,22 @@ namespace c_sharp_masterclass
     {
         static void Main(string[] args)
         {
-            string name = "Tee Bohne";
-            int age = 9;
+            string firstName = "Teelicious";
+            string lastName = "Bohne";
+            string fullName = string.Concat("", firstName, lastName, "");
+            Console.WriteLine(fullName); // output:TeeliciousBohne
+            Console.WriteLine(firstName.Substring(2)); // output:eelicious
+            Console.WriteLine(firstName.ToLower()); // output:teelicious
+            Console.WriteLine(firstName.ToUpper()); // output:TEELICIOUS
+            Console.WriteLine(firstName.Trim()); // output:TeeliciousBohne
+            Console.WriteLine(firstName.IndexOf('e')); // output: 1
+            Console.WriteLine(String.IsNullOrWhiteSpace(firstName)); // output:false
 
-            // String Concatenation
-            Console.WriteLine("String Concatenation");
-            Console.WriteLine("Hello, my name is " + name + " and I am " + age + " years old.");
-
-            // String Formatting
-            // string formatting uses index
-            Console.WriteLine("String Formatting");
-            Console.WriteLine("Hello, my name is {0} and I am {1} years old.", name, age);
-
-            // String Interpolation
-            // String interpolation uses $ at the start which will allow us to write out variables like this: {variableName}
-            Console.WriteLine("String Interpolation");
-            Console.WriteLine($"Hello, my name is {name} and I am {age} years old.");
-
-            // Verbatim Strings
-            // Literally and ignore any spaces and escape characters
-            Console.WriteLine("Verbatim Strings");
-            Console.WriteLine(@"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer interdum pretium libero sit amet hendrerit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut varius nibh eget orci mattis finibus. Etiam odio mauris, condimentum eget tortor non, gravida laoreet orci. Nam placerat, magna ut gravida euismod, urna est porttitor sem, id condimentum dui diam id purus. Donec ligula quam, lacinia eu nulla eu, vehicula egestas enim. Donec eu massa turpis.");
-
+            // In C#, the String.Format method is used to insert the object or variable value inside an string.
+            // With the String.Format we can replace the value in the specified format.
+            // Syntax:
+            string newFirstName = String.Format("any string {0}", firstName);
+            Console.WriteLine(newFirstName);
             Console.ReadLine();
         }
     }
