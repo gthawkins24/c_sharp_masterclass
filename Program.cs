@@ -2,23 +2,17 @@
 
 namespace c_sharp_masterclass
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            WriteSomething();
-            WriteSomethingSpecific("I am an argument and am called from a method");
-            Console.Read();
-        }
-        // access modifier (static) return type method name (parameter 1, parameter2)
-        public static void WriteSomething()
-        {
-            Console.WriteLine("I am called from a method");
+            int test2 = Add(Add(1, 2), Add(3, 4));
+            Console.WriteLine(test2);
         }
 
-        public static void WriteSomethingSpecific(string myText)
+        public static int Add(int num1, int num2)
         {
-            Console.WriteLine(myText);
+            return num1 + num2;
         }
     }
 }
