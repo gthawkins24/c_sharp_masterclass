@@ -1,5 +1,8 @@
 ﻿using System;
-using System.ComponentModel;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace c_sharp_masterclass
 {
@@ -7,14 +10,32 @@ namespace c_sharp_masterclass
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter your first number:");
-            string input1 = Console.ReadLine();
-            Console.WriteLine("Enter your second number:");
-            string input2 = Console.ReadLine();
-            int parse = Int32.Parse(input1 + input2);
-            int sum = (Int32.Parse(input1) + Int32.Parse(input2));
-            Console.WriteLine($"{input1} + {input2} = {sum}");
-            Console.Read();
+            Console.WriteLine("Please enter a number!");
+            string userInput = Console.ReadLine();
+
+            try
+            {
+            int userInputAsInt = int.Parse(userInput);
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Format Exception: please enter a number");
+                throw;
+            }
+            catch (OverflowException)
+            {
+                Console.WriteLine("Number is too long");
+            }
+            catch (ArgumentNullException)
+            {
+                Console.WriteLine("No Number entered");
+            }
+            finally
+            {
+                Console.WriteLine("you finally entered a number!");
+            }
+
+            Console.ReadKey();
         }
     }
 }
