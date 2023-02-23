@@ -10,31 +10,58 @@ namespace c_sharp_masterclass
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please enter a number!");
-            string userInput = Console.ReadLine();
+            int num1 = 5;
+            int num2 = 3;
+            int num3;
+            
+            //unary operators
+            num3 = -num1;
+            Console.WriteLine("num3 is {0}", num3);
 
-            try
-            {
-            int userInputAsInt = int.Parse(userInput);
-            }
-            catch (FormatException)
-            {
-                Console.WriteLine("Format Exception: please enter a number");
-                throw;
-            }
-            catch (OverflowException)
-            {
-                Console.WriteLine("Number is too long");
-            }
-            catch (ArgumentNullException)
-            {
-                Console.WriteLine("No Number entered");
-            }
-            finally
-            {
-                Console.WriteLine("you finally entered a number!");
-            }
+            bool isSunny = false;
+            Console.WriteLine("is it sunny? {0}", !isSunny);
 
+            // increment operators
+            int num = 0;
+            num++;
+            Console.WriteLine("num is {0}", num);
+            Console.WriteLine("num is {0}", num++);
+            Console.WriteLine("num is {0}", ++num);
+            Console.WriteLine(num);
+
+            // multiply and divide
+            int result;
+
+            result = num1 + num2;
+            Console.WriteLine("result of num1 + num2 is {0}", result);
+
+            // relational and type operators
+            bool isLower;
+            isLower = num1 > num2;
+            Console.WriteLine("False or True: {0}", isLower);
+
+            // equality operator
+            bool isEqual;
+            string yesOrNo;
+            num1 = 4;
+            num2 = 4;
+            isEqual = num1 == num2;
+            if (isEqual)
+            {
+                yesOrNo = "Yep!";
+            }
+            else
+            {
+                yesOrNo = "Nope!";
+            }
+            Console.WriteLine("Are they equal: {0}. Number 1: {1}, Number 2: {2}", yesOrNo, num1, num2);
+
+            // conditional operators
+            bool isLowerAndSunny = isSunny && isLower;
+            Console.WriteLine("Is it sunny and lower: {0}", isLowerAndSunny);
+
+            isLowerAndSunny = isLower || isSunny;
+            Console.WriteLine("Is it lower or sunny?: {0}", isLowerAndSunny);
             Console.ReadKey();
         }
     }
