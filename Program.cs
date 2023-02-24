@@ -10,59 +10,23 @@ namespace c_sharp_masterclass
     {
         static void Main(string[] args)
         {
-            int num1 = 5;
-            int num2 = 3;
-            int num3;
-            
-            //unary operators
-            num3 = -num1;
-            Console.WriteLine("num3 is {0}", num3);
+            Console.WriteLine("What is the temperature?");
+            string tempInput = Console.ReadLine();
+            int temperature = Convert.ToInt32(tempInput);
 
-            bool isSunny = false;
-            Console.WriteLine("is it sunny? {0}", !isSunny);
-
-            // increment operators
-            int num = 0;
-            num++;
-            Console.WriteLine("num is {0}", num);
-            Console.WriteLine("num is {0}", num++);
-            Console.WriteLine("num is {0}", ++num);
-            Console.WriteLine(num);
-
-            // multiply and divide
-            int result;
-
-            result = num1 + num2;
-            Console.WriteLine("result of num1 + num2 is {0}", result);
-
-            // relational and type operators
-            bool isLower;
-            isLower = num1 > num2;
-            Console.WriteLine("False or True: {0}", isLower);
-
-            // equality operator
-            bool isEqual;
-            string yesOrNo;
-            num1 = 4;
-            num2 = 4;
-            isEqual = num1 == num2;
-            if (isEqual)
+            if (temperature < 60)
             {
-                yesOrNo = "Yep!";
+                Console.WriteLine("Take the coat");
+            }
+            else if (temperature == 60)
+            {
+                Console.WriteLine("you good");
             }
             else
             {
-                yesOrNo = "Nope!";
+                Console.WriteLine("Cozy & Warm");
             }
-            Console.WriteLine("Are they equal: {0}. Number 1: {1}, Number 2: {2}", yesOrNo, num1, num2);
-
-            // conditional operators
-            bool isLowerAndSunny = isSunny && isLower;
-            Console.WriteLine("Is it sunny and lower: {0}", isLowerAndSunny);
-
-            isLowerAndSunny = isLower || isSunny;
-            Console.WriteLine("Is it lower or sunny?: {0}", isLowerAndSunny);
-            Console.ReadKey();
+                Console.Read();
         }
     }
 }
