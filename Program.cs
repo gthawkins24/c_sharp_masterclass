@@ -12,13 +12,22 @@ namespace c_sharp_masterclass
         {
             Console.WriteLine("What is the temperature?");
             string tempInput = Console.ReadLine();
-            int temperature = Convert.ToInt32(tempInput);
+            int numTemp;
+            if(int.TryParse(tempInput, out int number))
+            {
+                numTemp = number;
+            }
+            else
+            {
+                Console.WriteLine("You've entered a value that wasn't a number");
+                numTemp = 0;
+            }
 
-            if (temperature < 60)
+            if (number < 60)
             {
                 Console.WriteLine("Take the coat");
             }
-            else if (temperature == 60)
+            else if (number == 60)
             {
                 Console.WriteLine("you good");
             }
