@@ -19,7 +19,7 @@ namespace c_sharp_masterclass
             denis.IntroduceMyself();
 
             Human michael = new Human();
-            michael.IntroduceMyself();
+            michael.IntroduceMyself();            
         }
     }
 }
