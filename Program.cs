@@ -10,32 +10,24 @@ namespace c_sharp_masterclass
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("What is the temperature?");
-            string tempInput = Console.ReadLine();
-            int numTemp;
-            if(int.TryParse(tempInput, out int number))
-            {
-                numTemp = number;
-            }
-            else
-            {
-                Console.WriteLine("You've entered a value that wasn't a number");
-                numTemp = 0;
-            }
+            bool isAdmin;
+            bool isRegistered = true;
+            string userName = "";
+            Console.WriteLine("Please enter your username:");
+            userName = Console.ReadLine();
 
-            if (number < 60)
+            if (isRegistered)
             {
-                Console.WriteLine("Take the coat");
+                Console.WriteLine("Hi there, registered user");
+                if (userName != "")
+                {
+                    Console.WriteLine("Hi there, " + userName);
+                    if (userName.Equals("Admin"))
+                    {
+                        Console.WriteLine("Hi there, Admin");
+                    }
+                }
             }
-            else if (number == 60)
-            {
-                Console.WriteLine("you good");
-            }
-            else
-            {
-                Console.WriteLine("Cozy & Warm");
-            }
-                Console.Read();
         }
     }
 }
