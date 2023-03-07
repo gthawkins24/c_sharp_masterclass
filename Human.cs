@@ -7,16 +7,27 @@ using System.Threading.Tasks;
 namespace c_sharp_masterclass
 {
     // this class is a blueprint for a datatype
-    internal class Human
+    class Human
     {
         // member variable    
-        public string firstName = "T-";
-        public string lastName = "Bone";
+        private string firstName;
+        private string lastName;
+        private string eyeColor;
+        private int age;
+
+        // constructor
+        public Human (string firstName, string lastName, string eyeColor, int age)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.eyeColor = eyeColor;
+            this.age = age;
+        }
 
         // member method
         public void IntroduceMyself()
         {
-            Console.WriteLine("Hi, I'm {0} {1}", firstName, lastName);
+            Console.WriteLine("Hi, I'm {0} {1}. I'm {3} years old and my eyes are {2}", firstName, lastName, eyeColor, age);
         }
     }
 }

@@ -10,16 +10,12 @@ namespace c_sharp_masterclass
     {
         static void Main(string[] args)
         {
-            // create an object of my class
-            // an instance of Human
-            Human denis = new Human();
-            // access public variable from outside, and even change it
-            denis.firstName = "Denis";
-            // call methods of the class
-            denis.IntroduceMyself();
-
-            Human michael = new Human();
-            michael.IntroduceMyself();            
+            Human tBone = new Human("T-", "Bone", "Blue?", 34);
+            Human keith = new Human("Keith", "Who Cares", "worst", 47);
+            Human petey = new Human("Petey", "Noname", "blue", 14);
+            tBone.IntroduceMyself();
+            keith.IntroduceMyself();
+            petey.IntroduceMyself();
         }
     }
 }
