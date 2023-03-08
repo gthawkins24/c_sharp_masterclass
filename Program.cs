@@ -10,15 +10,13 @@ namespace c_sharp_masterclass
     {
         static void Main(string[] args)
         {
-            Human tBone = new Human("T-", "Bone", "Blue?", 34);
-            Human keith = new Human("Keith", "Who Cares", "worst", 47);
-            Human petey = new Human("Petey", "Noname", "blue", 14);
-            tBone.IntroduceMyself();
-            keith.IntroduceMyself();
-            petey.IntroduceMyself();
-
-            Human basicHuman = new Human();
-            basicHuman.IntroduceMyself();
+            Box box = new Box();
+            // box.length = 3;
+            box.SetLength(-3);
+            box.height = 4;
+            box.width = 5;
+            Console.WriteLine("box volume is " + box.GetVolume());
+            box.DisplayInfo();
         }
     }
 }
