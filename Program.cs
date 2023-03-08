@@ -12,10 +12,11 @@ namespace c_sharp_masterclass
         {
             Box box = new Box();
             // box.length = 3;
-            box.SetLength(-3);
-            box.height = 4;
-            box.width = 5;
-            Console.WriteLine("box volume is " + box.GetVolume());
+            box.SetLength(3);
+            box.Height = -4;
+            box.Width = 5;
+            Console.WriteLine("Box volume is " + box.GetVolume());
+            Console.WriteLine("Box width: " + box.Width);
             box.DisplayInfo();
         }
     }
