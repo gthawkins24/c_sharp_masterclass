@@ -16,6 +16,9 @@ namespace c_sharp_masterclass
             tBone.IntroduceMyself();
             keith.IntroduceMyself();
             petey.IntroduceMyself();
+
+            Human basicHuman = new Human();
+            basicHuman.IntroduceMyself();
         }
     }
 }

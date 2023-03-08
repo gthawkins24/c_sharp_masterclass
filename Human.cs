@@ -15,7 +15,12 @@ namespace c_sharp_masterclass
         private string eyeColor;
         private int age;
 
-        // constructor
+        public Human()
+        {
+            Console.WriteLine("constructor called. Object created");
+        }
+
+        // parameterized constructor
         public Human (string firstName, string lastName, string eyeColor, int age)
         {
             this.firstName = firstName;
